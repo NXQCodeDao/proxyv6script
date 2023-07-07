@@ -245,7 +245,9 @@ fi
 }
 
 generateProxyListFile() {
-      cat <<EOF > ${WORKDIR}/proxy.txt
+	echo "Dien Ten File Proxy Save"
+	read FileNameProxy
+      cat <<EOF > ${WORKDIR}/$FileNameProxy
 $(awk -F "/" '{print $3 ":" $4 ":" $1 ":" $2 }' ${WORKDATA})
 EOF
 }
